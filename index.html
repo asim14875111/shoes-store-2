@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Nike. Just do it. Nike.com</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&family=Big+Shoulders+Inline:opsz,wght@10..72,100..900&family=Big+Shoulders+Stencil:opsz,wght@10..72,100..900&family=Big+Shoulders:opsz,wght@10..72,100..900&family=DM+Serif+Text:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif+Todhri&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=WDXL+Lubrifont+TC&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+<link rel="icon" href="images/icons8-nike-50.png">
+</head>
+<style>
+body{
+  font-family: "Ancizar Sans", sans-serif;
+}
+.shoes-img{
+        height: 220px;
+}
+.container2{
+display:none;
+}
+.block-display{
+            display: block;
+}
+.none-display{
+    display: none;
+}  
+.imgs{
+    width: 23px;
+}
+
+.addtocart{
+    background: black;
+    color: white;
+    width: 15px;
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+    font-size: 10px;
+    margin-top: -10px;
+
+    border-radius: 100%;
+justify-self: end;
+}
+
+</style>
+<body>
+<div id="container" class="main-page">
+        <nav class="flex justify-between items-center pt-4 px-16">
+<div>
+    <img width="65px" src="images/icons8-nike-50.png" ></div>
+<div class="flex gap-12 pl-40">
+<h6 class="text-sm font-semibold text-[#737a85]">Products</h6>
+<h6 class="text-sm font-semibold text-[#737a85]">Pricing</h6>
+<h6 class="text-sm font-semibold text-[#737a85]">About</h6>
+<h6 class="text-sm font-semibold text-[#737a85]">FAQs</h6>
+
+</div>
+<div>
+    <img width="20px" src="images/icons8-add-to-cart-30.png" alt="">
+</div>
+
+
+</nav>
+
+<div  class="flex justify-between gap-20 px-20 pt-20">
+    <div>
+<h2 class="text-6xl  font-bold  pb-6">Find your <br> dream sneakers</h2>
+<p class="text-[#47494d] text-lg">Find your shoes from our various collections. here shoes <br> are endless and profit is also endless.</p>
+<!-- <a> -->
+<button onclick="chngcontent('2ndcontainer')" id="updatebtn" class="w-full text-center bg-[#252629] py-2 rounded text-white  mt-6 hover:bg-[#515257]">Buy now</button>
+<!-- </a> -->
+    </div>
+    <div class="w-6/12">
+        <h5 class="bg-[#252629] rounded text-white px-6 py-2 w-fit text-xl">Nine Waffle One</h5>
+        <img class="main-img-of-main-pg" src="images/pngwing.com.png" alt="">
+        <div class=" justify-self-end pr-20 -mt-32   w-fit ">
+        <h5 class="bg-[#252629] rounded text-white px-1"> <span class="text-2xl font-semibold">50%</span> <br> Discount</h5>
+        </div>
+    </div>
+</div>
+
+<div  class="flex items-center  pt-32 justify-center pb-10">
+
+    <h5 class="text-5xl font-semibold">Our Collections</h5>
+</div>
+<div class="flex justify-center pb-20 gap-10 pl-40">
+<div class="border rounded w-fit">
+    <img  width="220px" src="images/ChatGPT Image May 27, 2025, 08_00_09 PM.png" alt="">
+    <div class="px-3 pt-2">
+    <h5 class="text-2xl font-semibold">
+        Nike Revoultion 5
+    </h5>
+
+    <h6 class="font-semibold text-xl">$28</h6>
+<button onclick="chngcontent('3rdcontainer')" class="text-center w-full bg-[#252629] text-white rounded mt-8 mb-3 py-1 hover:bg-[#515257]" >Buy Now</button>
+</div>
+</div>
+<div class="w-[80%]" >
+    <img  class="w-[80%]" src="images/nike.PNG" alt="">
+</div>
+</div>
+<div  class="grid grid-cols-4 pb-20 justify-self-center gap-10 -ml-[25px]">
+<div class="border rounded w-fit">
+    <img class="shoes-img"  width="220px" src="images/pexels-melvin-buezo-1253763-2529148.jpg" alt="">
+    <div class="px-3 pt-2">
+    <h5 class="text-2xl font-semibold">
+        Nike Revolution 
+    </h5>
+
+    <h6 class="font-semibold text-xl">$20</h6>
+<button onclick="chngcontent('4thcontainer')"  class="text-center w-full bg-[#252629] text-white rounded mt-8 mb-3 py-1 hover:bg-[#515257]" >Buy Now</button>
+</div>
+</div>
+<div class="border rounded w-fit">
+    <img  width="220px" src="images/imani-bahati-LxVxPA1LOVM-unsplash.jpg" alt="">
+    <div class="px-3 pt-2">
+    <h5 class="text-2xl font-semibold">
+        Nike Revolution 3
+    </h5>
+
+    <h6 class="font-semibold text-xl">$35</h6>
+<button onclick="chngcontent('5thcontainer')" class="text-center w-full bg-[#252629] text-white rounded mt-8 mb-3 py-1 hover:bg-[#515257]" >Buy Now</button>
+</div>
+</div>
+<div class="border rounded w-fit">
+    <img class="shoes-img"  width="220px" src="images/george-catalina-1vHAP0oeUQE-unsplash.jpg" alt="">
+    <div class="px-3 pt-2">
+    <h5 class="text-2xl font-semibold">
+        Air Jordan
+    </h5>
+
+    <h6 class="font-semibold text-xl">$15</h6>
+<button onclick="chngcontent('6thcontainer')" class="text-center w-full bg-[#252629] text-white rounded mt-8 mb-3 py-1 hover:bg-[#515257]" >Buy Now</button>
+</div>
+</div>
+<div class="border rounded w-fit">
+    <img class="shoes-img" width="220px" src="images/usama-akram-kP6knT7tjn4-unsplash.jpg" alt="">
+    <div class="px-3 pt-2">
+    <h5 class="text-2xl font-semibold">
+        Nike Sports
+    </h5>
+
+    <h6 class="font-semibold text-xl">$22</h6>
+<button onclick="chngcontent('7thcontainer')" class="text-center w-full bg-[#252629] text-white rounded mt-8 mb-3 py-1 hover:bg-[#515257]" >Buy Now</button>
+</div>
+</div>
+
+</div>
+</div>
+<div id="2ndcontainer" class="container2"> 
+<nav class="flex justify-between py-0 px-14 items-center">
+
+    <div class="flex gap-4">
+<h6>Sports</h6>
+<h6>Running</h6>
+<h6>Casuals</h6>
+
+
+</div>
+
+
+
+<div onclick="displaymainpg('2ndcontainer')" class="flex cursor-pointer flex-col items-center"> 
+    <img width="50px" src="images/icons8-nike-100.png" alt="">
+<h6 class="font-bold text-lg">Shoe <span  class="text-[#2749cf]">Daisy</span> </h6>
+
+</div>
+
+
+<div class="flex gap-4 ">
+<img class="imgs" src="images/icons8-contacts-32.png">
+<img class="imgs" src="images/icons8-heart-50.png"> 
+<div>  
+<img class="imgs" src="images/icons8-shopping-bag-32.png">
+<p class="addtocart" id="addtocart2"></p>
+</div>
+</div>
+
+
+</nav>
+
+<div  class="flex justify-start pl-[58px] gap-20 pt-10">
+    <div class="w-[47%]"><img id="rotated-img" class="main-img" src="images/pngwing.com.png" alt=""></div>
+
+
+
+    <div class="pt-10">
+<h1 class="text-3xl font-bold ">Nine Waffle One</h1>
+<p  class="text-semibold pt-3">Men's Shoe</p>
+<div class="flex">
+<img class="-mt-[35px]" height="0" width="110px" src="images/star.png" alt="">
+    <p class="pt-[10px] underline cursor-pointer text-[#717882]  text-sm">(105 reviews)</p>
+</div>
+<div class="-mt-8 flex gap-2 pb-4">
+    <h6  class="font-semibold">Quantity</h6>
+    <div  class="add-subtract flex items-center gap-4 border-[0.5px] border-black px-[3px] rounded">
+        <h6 onclick="minus('counter','price')" class="cursor-pointer"><img width="15px" src="images/icons8-minus-24.png" alt=""></h6>
+<p  id="counter">1</p>
+<h6 onclick="add('counter','price')" class="cursor-pointer"><img width="15px" src="images/icons8-add-50.png" alt=""></h6>
+
+    </div>
+</div>
+<div>
+<p  class="font-bold">
+    $
+    <span
+     id="price" class="font-extrabold text-3xl pt-6 pb-6">
+       250</span>
+       </p>
+</div>
+<p>Bringing a new look to the Waffle sneaker family, the Nike Waffle One <br> balances everything you love about heritage Nike runnign with fresh <br> innovations.Its TPU heel clip adds energy while a mixture of transp<br>arent mesh (let that sock game shine) and retro suedes give texture <br> and depth. The updated Waffle outsole provides a level of support <br> and traction you have to feel to believe </p>
+
+<p class="pt-4 pb-3 text-sm font-bold flex gap-2 items-center">Delivery <span class="text-[#8c8d91]">(5/7 days)</span></p>
+<div  class="pt-4">
+<button onclick="addtocart('addtocart2')" class="bg-[#323336] text-white w-full py-2 rounded-md hover:bg-[#4c4d52]">Add to cart</button>
+</div>
+
+    </div>
+</div>
+</div>
+<div id="3rdcontainer" class="container2"> 
+<nav class="flex justify-between py-0 px-14 items-center">
+
+    <div class="flex gap-4">
+<h6>Sports</h6>
+<h6>Running</h6>
+<h6>Casuals</h6>
+
+
+</div>
+
+
+
+<div onclick="displaymainpg('3rdcontainer')" class="flex cursor-pointer flex-col items-center"> 
+    <img width="50px" src="images/icons8-nike-100.png" alt="">
+<h6 class="font-bold text-lg">Shoe <span  class="text-[#2749cf]">Daisy</span> </h6>
+
+</div>
+
+
+<div class="flex gap-4 ">
+<img class="imgs" src="images/icons8-contacts-32.png">
+<img class="imgs" src="images/icons8-heart-50.png">  
+<div> 
+<img class="imgs" src="images/icons8-shopping-bag-32.png">
+<p class="addtocart" id="addtocart3"></p>
+</div>
+</div>
+
+
+</nav>
+
+<div  class="flex justify-start pl-[58px] gap-20 pt-10">
+    <div class="w-[38%]">
+
+    
+        <img  id="rotated-img" class="main-img"  src="images/ChatGPT Image May 27, 2025, 08_00_09 PM.png" alt="">
+    </div>
+
+
+
+    <div class="pt-10">
+<h1 class="text-3xl font-bold ">Nike Revolution 5</h1>
+<p  class="text-semibold pt-3">Men's Shoe</p>
+<div class="flex">
+<img class="-mt-[35px]" height="0" width="110px" src="images/star.png" alt="">
+    <p class="pt-[10px] underline cursor-pointer text-[#717882]  text-sm">(75 reviews)</p>
+</div>
+<div class="-mt-8 flex gap-2 pb-4">
+    <h6  class="font-semibold">Quantity</h6>
+    <div  class="add-subtract flex items-center gap-4 border-[0.5px] border-black px-[3px] rounded">
+        <h6 onclick="minus('counter2','price2')" class="cursor-pointer"><img width="15px" src="images/icons8-minus-24.png" alt=""></h6>
+<p  id="counter2">1</p>
+<h6 onclick="add('counter2','price2')" class="cursor-pointer"><img width="15px" src="images/icons8-add-50.png" alt=""></h6>
+
+    </div>
+</div>
+<div>
+<p  class="font-bold">
+    $
+    <span
+     id="price2" class="font-extrabold text-3xl pt-6 pb-6">
+       250</span>
+       </p>
+</div>
+<p>Bringing a new look to the nike revolution 5, the nike revolution 5 balances everything you love <br> about heritage Nike runnign with fresh innovations.Its TPU heel clip adds energy while <br> a mixture of transparent mesh (let that sock game shine) and retro suedes  give texture  and depth. <br> The updated  revolution  outsole provides a level of support  and traction you have to feel to believe </p>
+
+<p class="pt-4 pb-3 text-sm font-bold flex gap-2 items-center">Delivery <span class="text-[#8c8d91]">(5/7 days)</span></p>
+<div  class="pt-[4.9rem]">
+<button onclick="addtocart('addtocart3')" class="bg-[#323336] text-white w-full py-2 rounded-md hover:bg-[#4c4d52]">Add to cart</button>
+</div>
+
+    </div>
+</div>
+</div>
+<div id="4thcontainer" class="container2"> 
+<nav class="flex justify-between py-0 px-14 items-center">
+
+    <div class="flex gap-4">
+<h6>Sports</h6>
+<h6>Running</h6>
+<h6>Casuals</h6>
+
+
+</div>
+
+
+
+<div onclick="displaymainpg('4thcontainer')" class="flex cursor-pointer flex-col items-center"> 
+    <img width="50px" src="images/icons8-nike-100.png" alt="">
+<h6 class="font-bold text-lg">Shoe <span  class="text-[#2749cf]">Daisy</span> </h6>
+
+</div>
+
+
+<div class="flex gap-4 ">
+<img class="imgs" src="images/icons8-contacts-32.png">
+<img class="imgs" src="images/icons8-heart-50.png">   
+<div>
+<img class="imgs" src="images/icons8-shopping-bag-32.png">
+<p class="addtocart" id="addtocart4"></p>
+</div>
+</div>
+
+
+</nav>
+
+<div  class="flex justify-start pl-[58px] gap-20 pt-10">
+    <div  class="w-[29%] h-20">
+     
+            <img height="50px" id="rotated-img" class="main-img"   src="images/pexels-melvin-buezo-1253763-2529148.jpg" alt="">
+    </div>
+
+
+
+    <div class="">
+<h1 class="text-3xl font-bold ">Nike Revolution </h1>
+<p  class="text-semibold pt-3">Men's Shoe</p>
+<div class="flex">
+<img class="-mt-[35px]" height="0" width="110px" src="images/star.png" alt="">
+    <p class="pt-[10px] underline cursor-pointer text-[#717882]  text-sm">(30 reviews)</p>
+</div>
+<div class="-mt-8 flex gap-2 pb-4">
+    <h6  class="font-semibold">Quantity</h6>
+    <div  class="add-subtract flex items-center gap-4 border-[0.5px] border-black px-[3px] rounded">
+        <h6 onclick="minus('counter3','price3')" class="cursor-pointer"><img width="15px" src="images/icons8-minus-24.png" alt=""></h6>
+<p  id="counter3">1</p>
+<h6 onclick="add('counter3','price3')" class="cursor-pointer"><img width="15px" src="images/icons8-add-50.png" alt=""></h6>
+
+    </div>
+</div>
+<div>
+<p  class="font-bold">
+    $
+    <span
+     id="price3" class="font-extrabold text-3xl pt-6 pb-6">
+       250</span>
+       </p>
+</div>
+<p>Bringing a new look to the nike revolution 5, the nike revolution 5 balances everything you love <br> about heritage Nike runnign with fresh innovations.Its TPU heel clip adds energy while <br> a mixture of transparent mesh (let that sock game shine) and retro suedes  give texture  and depth. <br> The updated  revolution  outsole provides a level of support  and traction you have to feel to believe  </p>
+
+<p class="pt-4 pb-3 text-sm font-bold flex gap-2 items-center">Delivery <span class="text-[#8c8d91]">(5/7 days)</span></p>
+<div  class="pt-[5.2rem]">
+<button onclick="addtocart('addtocart4')" class="bg-[#323336] text-white w-full py-2 rounded-md hover:bg-[#4c4d52]">Add to cart</button>
+</div>
+
+    </div>
+</div>
+</div>
+<div id="5thcontainer" class="container2"> 
+<nav class="flex justify-between py-0 px-14 items-center">
+
+    <div class="flex gap-4">
+<h6>Sports</h6>
+<h6>Running</h6>
+<h6>Casuals</h6>
+
+
+</div>
+
+
+
+<div onclick="displaymainpg('5thcontainer')" class="flex cursor-pointer flex-col items-center"> 
+    <img width="50px" src="images/icons8-nike-100.png" alt="">
+<h6 class="font-bold text-lg">Shoe <span  class="text-[#2749cf]">Daisy</span> </h6>
+
+</div>
+
+
+<div class="flex gap-4 ">
+<img class="imgs" src="images/icons8-contacts-32.png">
+<img class="imgs" src="images/icons8-heart-50.png">  
+<div> 
+<img class="imgs" src="images/icons8-shopping-bag-32.png">
+<p class="addtocart" id="addtocart5"></p>
+</div>
+</div>
+
+
+</nav>
+
+<div  class="flex justify-start pl-[58px] gap-20 pt-10">
+    <div class="w-[47%] h-5/12">
+     
+       
+                <img id="rotated-img" class="main-img"  src="images/imani-bahati-LxVxPA1LOVM-unsplash.jpg" alt="">
+    </div>
+
+
+
+    <div class="pt-10">
+<h1 class="text-3xl font-bold ">Nike Revolution 3 </h1>
+<p  class="text-semibold pt-3">Men's Shoe</p>
+<div class="flex">
+<img class="-mt-[35px]" height="0" width="110px" src="images/star.png" alt="">
+    <p class="pt-[10px] underline cursor-pointer text-[#717882]  text-sm">(30 reviews)</p>
+</div>
+<div class="-mt-8 flex gap-2 pb-4">
+    <h6  class="font-semibold">Quantity</h6>
+    <div  class="add-subtract flex items-center gap-4 border-[0.5px] border-black px-[3px] rounded">
+        <h6 onclick="minus('counter5','price5')" class="cursor-pointer"><img width="15px" src="images/icons8-minus-24.png" alt=""></h6>
+<p  id="counter5">1</p>
+<h6 onclick="add('counter5','price5')" class="cursor-pointer"><img width="15px" src="images/icons8-add-50.png" alt=""></h6>
+
+    </div>
+</div>
+<div>
+<p  class="font-bold">
+    $
+    <span
+     id="price5" class="font-extrabold text-3xl pt-6 pb-6">
+       250</span>
+       </p>
+</div>
+<p>Bringing a new look to the nike revolution 3 , the nike revolution  <br> balances everything you love about heritage Nike runnign with fresh <br> innovations.Its TPU heel clip adds energy while a mixture of transp<br>arent mesh (let that sock game shine) and retro suedes give texture <br> and depth. The updated  revolution  outsole provides a level of support <br> and traction you have to feel to believe </p>
+
+<p class="pt-4 pb-3 text-sm font-bold flex gap-2 items-center">Delivery <span class="text-[#8c8d91]">(5/7 days)</span></p>
+<div  class="pt-4">
+<button onclick="addtocart('addtocart5')" class="bg-[#323336] text-white w-full py-2 rounded-md hover:bg-[#4c4d52]">Add to cart</button>
+</div>
+
+    </div>
+</div>
+</div>
+<div id="6thcontainer" class="container2"> 
+<nav class="flex justify-between py-0 px-14 items-center">
+
+    <div class="flex gap-4">
+<h6>Sports</h6>
+<h6>Running</h6>
+<h6>Casuals</h6>
+
+
+</div>
+
+
+
+<div onclick="displaymainpg('6thcontainer')" class="flex cursor-pointer flex-col items-center"> 
+    <img width="50px" src="images/icons8-nike-100.png" alt="">
+<h6 class="font-bold text-lg">Shoe <span  class="text-[#2749cf]">Daisy</span> </h6>
+
+</div>
+
+
+<div class="flex gap-4 ">
+<img class="imgs" src="images/icons8-contacts-32.png">
+<img class="imgs" src="images/icons8-heart-50.png">
+<div>   
+<img class="imgs" src="images/icons8-shopping-bag-32.png">
+<p class="addtocart" id="addtocart6"> </p>
+</div>
+</div>
+
+
+</nav>
+
+<div  class="flex justify-start pl-[58px] gap-20 pt-10">
+    <div class="w-[51%] h-5/12">
+                <img id="rotated-img" class="main-img" src="images/george-catalina-1vHAP0oeUQE-unsplash.jpg" alt="">
+    </div>
+
+
+
+    <div class="">
+<h1 class="text-3xl font-bold ">Air Jordan </h1>
+<p  class="text-semibold pt-3">Men's Shoe</p>
+<div class="flex">
+<img class="-mt-[35px]" height="0" width="110px" src="images/star.png" alt="">
+    <p class="pt-[10px] underline cursor-pointer text-[#717882]  text-sm">(30 reviews)</p>
+</div>
+<div class="-mt-8 flex gap-2 pb-4">
+    <h6  class="font-semibold">Quantity</h6>
+    <div  class="add-subtract flex items-center gap-4 border-[0.5px] border-black px-[3px] rounded">
+        <h6 onclick="minus('counter6','price6')" class="cursor-pointer"><img width="15px" src="images/icons8-minus-24.png" alt=""></h6>
+<p  id="counter6">1</p>
+<h6 onclick="add('counter6','price6')" class="cursor-pointer"><img width="15px" src="images/icons8-add-50.png" alt=""></h6>
+
+    </div>
+</div>
+<div>
+<p  class="font-bold">
+    $
+    <span
+     id="price6" class="font-extrabold text-3xl pt-6 pb-6">
+       250</span>
+       </p>
+</div>
+<p>Bringing a  look to the Air Jordan , the nike jordan  <br> balances everything you love about heritage Nike runnign with fresh <br> innovations.Its TPU heel clip adds energy while a mixture of transp<br>arent mesh (let that sock game shine) and retro suedes give texture <br> and depth. The updated  revolution  outsole provides a level of support <br> and traction you have to feel to believe </p>
+
+<p class="pt-4 pb-3 text-sm font-bold flex gap-2 items-center">Delivery <span class="text-[#8c8d91]">(5/7 days)</span></p>
+<div  class="pt-4">
+<button onclick="addtocart('addtocart6')" class="bg-[#323336] text-white w-full py-2 rounded-md hover:bg-[#4c4d52]">Add to cart</button>
+</div>
+
+    </div>
+</div>
+</div>
+<div id="7thcontainer" class="container2"> 
+<nav class="flex justify-between py-0 px-14 items-center">
+
+    <div class="flex gap-4">
+<h6>Sports</h6>
+<h6>Running</h6>
+<h6>Casuals</h6>
+
+
+</div>
+
+
+
+<div onclick="displaymainpg('7thcontainer')" class="flex cursor-pointer flex-col items-center"> 
+    <img width="50px" src="images/icons8-nike-100.png" alt="">
+<h6 class="font-bold text-lg">Shoe <span  class="text-[#2749cf]">Daisy</span> </h6>
+
+</div>
+
+
+<div class="flex gap-4 ">
+<img class="imgs" src="images/icons8-contacts-32.png">
+<img class="imgs" src="images/icons8-heart-50.png"> 
+<div>  
+<img class="imgs" src="images/icons8-shopping-bag-32.png">
+<p class="addtocart"  id="addtocart7"></p>
+</div>
+</div>
+
+
+</nav>
+
+<div  class="flex justify-start pl-[58px] gap-20 pt-10">
+    <div class="w-[30%] h-[5%] ">
+                <img id="rotated-img" class="main-img" src="images/usama-akram-kP6knT7tjn4-unsplash.jpg" alt="">
+    </div>
+
+
+
+    <div class="pt-10">
+<h1 class="text-3xl font-bold ">Nike Sports </h1>
+<p  class="text-semibold pt-3">Men's Shoe</p>
+<div class="flex">
+<img class="-mt-[35px]" height="0" width="110px" src="images/star.png" alt="">
+    <p class="pt-[10px] underline cursor-pointer text-[#717882]  text-sm">(30 reviews)</p>
+</div>
+<div class="-mt-8 flex gap-2 pb-4">
+    <h6  class="font-semibold">Quantity</h6>
+    <div  class="add-subtract flex items-center gap-4 border-[0.5px] border-black px-[3px] rounded">
+        <h6 onclick="minus('counter7','price7')" class="cursor-pointer"><img width="15px" src="images/icons8-minus-24.png" alt=""></h6>
+<p id="counter7">1</p>
+<h6 onclick="add('counter7','price7')" class="cursor-pointer"><img width="15px" src="images/icons8-add-50.png" alt=""></h6>
+    </div>
+</div>
+<div>
+<p  class="font-bold">
+    $
+    <span
+     id="price7" class="font-extrabold text-3xl pt-6 pb-6">
+       250</span>
+       </p>
+</div>
+<p>Bringing a  look to the nike sports shoes, the nike sports  balances everything you love about heritage Nike <br>runnign with fresh innovations.Its TPU heel clip adds energy while a mixture of transparent mesh (let <br> that sock game shine) and retro suedes give texture  and depth. The updated  revolution  outsole provides <br> a level of support and traction you have to feel to believe </p>
+
+<p class="pt-4 pb-3 text-sm font-bold flex gap-2 items-center">Delivery <span class="text-[#8c8d91]">(5/7 days)</span></p>
+<div  class="pt-[4.5rem]">
+<button id="cartbtn" onclick="addtocart('addtocart7')" class="bg-[#323336] text-white w-full py-2 rounded-md hover:bg-[#4c4d52]">Add to cart</button>
+</div>
+
+    </div>
+</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
