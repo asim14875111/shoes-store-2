@@ -31,7 +31,6 @@ display:none;
 .imgs{
     width: 23px;
 }
-
 .addtocart{
     background: black;
     color: white;
@@ -44,6 +43,11 @@ display:none;
 
     border-radius: 100%;
 justify-self: end;
+}
+
+.main-page{
+    margin: 0 auto;
+    width: fit-content;
 }
 
 </style>
@@ -215,7 +219,7 @@ justify-self: end;
 
 <p class="pt-4 pb-3 text-sm font-bold flex gap-2 items-center">Delivery <span class="text-[#8c8d91]">(5/7 days)</span></p>
 <div  class="pt-4">
-<button onclick="addtocart('addtocart2')" class="bg-[#323336] text-white w-full py-2 rounded-md hover:bg-[#4c4d52]">Add to cart</button>
+<button id="main-img-button" onclick="addtocart('addtocart2')" class="bg-[#323336] text-white w-full py-2 rounded-md hover:bg-[#4c4d52]">Add to cart</button>
 </div>
 
     </div>

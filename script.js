@@ -27,7 +27,7 @@ function chngcontent(Id){
     container.classList.add('none-display')
     // const container2 = document.getElementById('2ndcontainer')
 container2.classList.add('block-display')
-createSlug(str)
+
 }
 
 
@@ -46,3 +46,34 @@ function addtocart(Id){
 button.innerHTML = count2++
 
 }
+
+
+
+// const Productslug = "Shoes-store"
+// window.history.pushState({},"",`/${Productslug}`)
+// console.log("Current URL:", window.location.href);
+
+
+// const addtocartbtn = document.getElementById('main-img-button')
+// addtocartbtn.addEventListener('click', () =>{
+// })
+
+// const productSlug = "Shoes-store";
+// // Update the URL without reloading the page
+// window.history.pushState({}, "", `${productSlug}`);
+// console.log("Current URL:", window.location.href);
+
+
+// const base ='http://127.0.0.1:5500/'
+// const url = new URL('shoes/store/pk',base)
+// console.log(url)
+// window.location.href = url
+
+
+
+const changeurl = document.getElementById('updatebtn') 
+changeurl.addEventListener('click', function(){
+    const newslug = 'new-slug'
+    const newurl = `/new-path/${newslug}`
+    window.history.replaceState({path: newurl}, '', newurl)
+})
