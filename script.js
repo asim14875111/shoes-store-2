@@ -71,9 +71,9 @@ button.innerHTML = count2++
 
 
 
-const changeurl = document.getElementById('updatebtn') 
-changeurl.addEventListener('click', function(){
-    const newslug = 'new-slug'
-    const newurl = `/new-path/${newslug}`
-    window.history.replaceState({path: newurl}, '', newurl)
-})
+// const changeurl = document.getElementById('updatebtn') 
+// changeurl.addEventListener('click', function(){
+//     const newslug = 'new-slug'
+//     const newurl = `/new-path/${newslug}`
+//     window.history.replaceState({path: newurl}, '', newurl)
+// })
