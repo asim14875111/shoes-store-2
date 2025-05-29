@@ -88,6 +88,17 @@ footer{
     color: white;
     margin-top: 90px;
 }
+.scrollable{
+    max-width: 920px;
+    justify-self: center;
+    animation: scroll 10s linear infinite;
+}
+
+@keyframes scroll {
+ left{
+    transform: translate(-100%);
+}    
+}
 
 
 </style>
@@ -117,10 +128,10 @@ footer{
     </div>
     <div class="w-5/12">
   
-        <img class="main-img-of-main-pg" src="images/pngwing.com.png" alt="">
-        <!-- <div class=" justify-self-end pr-20    w-fit ">
+        <!-- <div class=" justify-self-end pr-40  -mb-6   w-fit ">
         <h5 class="bg-[#252629] rounded text-white px-1"> <span class="text-2xl font-semibold">50%</span> <br> Discount</h5>
         </div> -->
+        <img class="main-img-of-main-pg" src="images/pngwing.com.png" alt="">
         <div class="flex justify-center">
               <h5 class=" nine-waffle-one rounded  px-6 py-2 w-fit text-2xl font-bold ">Nine Waffle One</h5>
               </div>
@@ -147,6 +158,8 @@ footer{
     <img  class="w-[80%]" src="images/Capture.PNG" alt="">
 </div>
 </div>
+<div class="scrollable">
+<marquee behavior="" direction="">
 <div  class="grid grid-cols-4  pb-20 justify-self-center gap-10 -ml-[25px]">
 <div class="border rounded w-fit">
     <img class="shoes-img"  width="220px" src="images/pexels-melvin-buezo-1253763-2529148.jpg" alt="">
@@ -192,7 +205,8 @@ footer{
 <button id="sports-btn" onclick="chngcontent('7thcontainer')" class="text-center w-full bg-[#252629] text-white rounded mt-8 mb-3 py-1 hover:bg-[#515257]" >Buy Now</button>
 </div>
 </div>
-
+</div>
+</marquee>
 </div>
 
 <div class="flex flex-col justify-self-center justify-center">
