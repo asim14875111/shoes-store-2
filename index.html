@@ -10,6 +10,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&family=Big+Shoulders+Inline:opsz,wght@10..72,100..900&family=Big+Shoulders+Stencil:opsz,wght@10..72,100..900&family=Big+Shoulders:opsz,wght@10..72,100..900&family=DM+Serif+Text:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif+Todhri&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=WDXL+Lubrifont+TC&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&family=Big+Shoulders+Inline:opsz,wght@10..72,100..900&family=Big+Shoulders+Stencil:opsz,wght@10..72,100..900&family=Big+Shoulders:opsz,wght@10..72,100..900&family=DM+Serif+Text:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif+Todhri&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=WDXL+Lubrifont+TC&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 <link rel="icon" href="images/icons8-nike-50.png">
 </head>
 <style>
@@ -44,16 +47,53 @@ display:none;
     border-radius: 100%;
 justify-self: end;
 }
-
 .main-page{
     margin: 0 auto;
     width: fit-content;
 }
+.nine-waffle-one{
+font-family: 'Courier New', Courier, monospace;
+/* color: #0d326e; */
+}
+.second-last-footer-element{
+    font-size: 35px;
+    font-weight: 900;
+    line-height: 30px;
+    text-align: center;
+  font-family: "Ancizar Sans", sans-serif;
+}
+
+.paragraph{
+        line-height: 19px;
+        padding-top: 12px;
+        font-size: 16px;
+    /* text-align: center; */
+  font-family: "Ancizar Sans", sans-serif;
+}
+
+.join-list{
+    border: 2px solid black;
+    margin-top:22px;
+padding-left: 20px;
+padding-right: 20px;
+padding-top: 10px;
+padding-bottom: 10px;
+font-size: 14px;
+}
+
+footer{
+    background:#111111;
+    width: 100%;
+    padding-top: 50px;
+    color: white;
+    margin-top: 90px;
+}
+
 
 </style>
 <body>
 <div id="container" class="main-page">
-        <nav class="flex justify-between items-center pt-4 px-16">
+        <nav class="flex justify-between items-center pt-4 px-16 bg-[#dcdcdc]">
 <div>
     <img width="65px" src="images/icons8-nike-50.png" ></div>
 <div class="flex gap-12 pl-40">
@@ -65,24 +105,25 @@ justify-self: end;
 <div>
     <img width="20px" src="images/icons8-add-to-cart-30.png" alt="">
 </div>
-
-
 </nav>
 
-<div  class="flex justify-between gap-20 px-20 pt-20">
-    <div>
-<h2 class="text-6xl  font-bold  pb-6">Find your <br> dream sneakers</h2>
+<div  class="flex bg-[#dcdcdc] pb-10 justify-between items-center gap-16 px-20 pt-20">
+<div>
+<h2 class="main-heading text-6xl  font-bold  pb-6">Find your <br> dream sneakers</h2>
 <p class="text-[#47494d] text-lg">Find your shoes from our various collections. here shoes <br> are endless and profit is also endless.</p>
 <!-- <a> -->
-<button onclick="chngcontent('2ndcontainer')" id="updatebtn" class="w-full text-center bg-[#252629] py-2 rounded text-white  mt-6 hover:bg-[#515257]">Buy now</button>
+<button onclick="chngcontent('2ndcontainer')" id="updatebtn" class="w-fit text-center bg-[#252629] py-2 rounded text-white px-10  mt-6 hover:bg-[#515257]">Buy now</button>
 <!-- </a> -->
     </div>
-    <div class="w-6/12">
-        <h5 class="bg-[#252629] rounded text-white px-6 py-2 w-fit text-xl">Nine Waffle One</h5>
+    <div class="w-5/12">
+  
         <img class="main-img-of-main-pg" src="images/pngwing.com.png" alt="">
-        <div class=" justify-self-end pr-20 -mt-32   w-fit ">
+        <!-- <div class=" justify-self-end pr-20    w-fit ">
         <h5 class="bg-[#252629] rounded text-white px-1"> <span class="text-2xl font-semibold">50%</span> <br> Discount</h5>
-        </div>
+        </div> -->
+        <div class="flex justify-center">
+              <h5 class=" nine-waffle-one rounded  px-6 py-2 w-fit text-2xl font-bold ">Nine Waffle One</h5>
+              </div>
     </div>
 </div>
 
@@ -99,14 +140,14 @@ justify-self: end;
     </h5>
 
     <h6 class="font-semibold text-xl">$28</h6>
-<button onclick="chngcontent('3rdcontainer')" class="text-center w-full bg-[#252629] text-white rounded mt-8 mb-3 py-1 hover:bg-[#515257]" >Buy Now</button>
+<button id="nike-revol-btn" onclick="chngcontent('3rdcontainer')" class="text-center w-full bg-[#252629] text-white rounded mt-8 mb-3 py-1 hover:bg-[#515257]" >Buy Now</button>
 </div>
 </div>
-<div class="w-[80%]" >
-    <img  class="w-[80%]" src="images/nike.PNG" alt="">
+<div class="w-[70%]">
+    <img  class="w-[80%]" src="images/Capture.PNG" alt="">
 </div>
 </div>
-<div  class="grid grid-cols-4 pb-20 justify-self-center gap-10 -ml-[25px]">
+<div  class="grid grid-cols-4  pb-20 justify-self-center gap-10 -ml-[25px]">
 <div class="border rounded w-fit">
     <img class="shoes-img"  width="220px" src="images/pexels-melvin-buezo-1253763-2529148.jpg" alt="">
     <div class="px-3 pt-2">
@@ -115,7 +156,7 @@ justify-self: end;
     </h5>
 
     <h6 class="font-semibold text-xl">$20</h6>
-<button onclick="chngcontent('4thcontainer')"  class="text-center w-full bg-[#252629] text-white rounded mt-8 mb-3 py-1 hover:bg-[#515257]" >Buy Now</button>
+<button id="second-urlbtn" onclick="chngcontent('4thcontainer')"  class="text-center w-full bg-[#252629] text-white rounded mt-8 mb-3 py-1 hover:bg-[#515257]" >Buy Now</button>
 </div>
 </div>
 <div class="border rounded w-fit">
@@ -126,7 +167,7 @@ justify-self: end;
     </h5>
 
     <h6 class="font-semibold text-xl">$35</h6>
-<button onclick="chngcontent('5thcontainer')" class="text-center w-full bg-[#252629] text-white rounded mt-8 mb-3 py-1 hover:bg-[#515257]" >Buy Now</button>
+<button id="third-btn" onclick="chngcontent('5thcontainer')" class="text-center w-full bg-[#252629] text-white rounded mt-8 mb-3 py-1 hover:bg-[#515257]" >Buy Now</button>
 </div>
 </div>
 <div class="border rounded w-fit">
@@ -137,7 +178,7 @@ justify-self: end;
     </h5>
 
     <h6 class="font-semibold text-xl">$15</h6>
-<button onclick="chngcontent('6thcontainer')" class="text-center w-full bg-[#252629] text-white rounded mt-8 mb-3 py-1 hover:bg-[#515257]" >Buy Now</button>
+<button id="airjrdn-btn" onclick="chngcontent('6thcontainer')" class="text-center w-full bg-[#252629] text-white rounded mt-8 mb-3 py-1 hover:bg-[#515257]" >Buy Now</button>
 </div>
 </div>
 <div class="border rounded w-fit">
@@ -148,11 +189,65 @@ justify-self: end;
     </h5>
 
     <h6 class="font-semibold text-xl">$22</h6>
-<button onclick="chngcontent('7thcontainer')" class="text-center w-full bg-[#252629] text-white rounded mt-8 mb-3 py-1 hover:bg-[#515257]" >Buy Now</button>
+<button id="sports-btn" onclick="chngcontent('7thcontainer')" class="text-center w-full bg-[#252629] text-white rounded mt-8 mb-3 py-1 hover:bg-[#515257]" >Buy Now</button>
 </div>
 </div>
 
 </div>
+
+<div class="flex flex-col justify-self-center justify-center">
+<h5 class="second-last-footer-element" > Never miss <br> a drop.</h5>
+<p class=" paragraph">Receive updates about new <br> products and promotions.</p>
+
+<button class="join-list">JOIN MAILING LIST</button>
+</div>
+
+
+<footer>
+<div class="flex flex-col  px-40">
+
+<h5 class="text-2xl">Nike Store</h5>
+<div class="flex justify-center gap-40">
+<ul class="pt-4 flex flex-col gap-3">
+<li class="font-light">Find a Store</li>
+<li class="font-light">Get Help</li>
+<li class="font-light">Returns</li>
+<li class="font-light">Contact Us</li>
+<li class="font-light">Contact Us</li>
+</ul>
+<ul class="pt-4 flex flex-col gap-3">
+<li class="font-light">About Nike</li>
+<li class="font-light">News</li>
+<li class="font-light">Carrers</li>
+<li class="font-light"> Investors</li>
+<li class="font-light"> Investors</li>
+</ul>
+<ul class="pt-4 flex flex-col gap-3">
+<li class="font-light">Sustanablity</li>
+<li class="font-light">Terms of Use</li>
+<li class="font-light">Privacy</li>
+<li class="font-light "> Cookie Policy</li>
+<li class="font-light "> Cookie Policy</li>
+</ul>
+
+<div class="flex flex-col">
+<div class="bg-[#161414] px-7 py-3 rounded">
+<h4 class="text-xl">Your Voice Matters</h4>
+<p class="font-extralight pt-5">We'd love to learn more <br> about your shopping <br>experiences on <br> nike.com and how we <br> can improve!</p>
+
+</div>
+
+
+<div class="flex justify-self-end pt-6 pb-8">
+<h6>Connect With Us</h6>
+
+</div>
+</div>
+</div>
+
+</div>
+</footer>
+
 </div>
 <div id="2ndcontainer" class="container2"> 
 <nav class="flex justify-between py-0 px-14 items-center">
@@ -167,9 +262,9 @@ justify-self: end;
 
 
 
-<div onclick="displaymainpg('2ndcontainer')" class="flex cursor-pointer flex-col items-center"> 
+<div onclick="displaymainpg('2ndcontainer')" class="flex cursor-pointer hover:text-blue-700 flex-col items-center"> 
     <img width="50px" src="images/icons8-nike-100.png" alt="">
-<h6 class="font-bold text-lg">Shoe <span  class="text-[#2749cf]">Daisy</span> </h6>
+<h6 class="font-bold text-lg">Home <span  class="text-[#2749cf]"></span> </h6>
 
 </div>
 
@@ -238,9 +333,9 @@ justify-self: end;
 
 
 
-<div onclick="displaymainpg('3rdcontainer')" class="flex cursor-pointer flex-col items-center"> 
+<div onclick="displaymainpg('3rdcontainer')" class="flex cursor-pointer hover:text-blue-800 flex-col items-center"> 
     <img width="50px" src="images/icons8-nike-100.png" alt="">
-<h6 class="font-bold text-lg">Shoe <span  class="text-[#2749cf]">Daisy</span> </h6>
+<h6 class="font-bold text-lg ">Home <span  class="text-[#2749cf]"></span> </h6>
 
 </div>
 
@@ -313,9 +408,9 @@ justify-self: end;
 
 
 
-<div onclick="displaymainpg('4thcontainer')" class="flex cursor-pointer flex-col items-center"> 
+<div onclick="displaymainpg('4thcontainer')" class="flex cursor-pointer hover:text-blue-700 flex-col items-center"> 
     <img width="50px" src="images/icons8-nike-100.png" alt="">
-<h6 class="font-bold text-lg">Shoe <span  class="text-[#2749cf]">Daisy</span> </h6>
+<h6 class="font-bold text-lg">Home <span  class="text-[#2749cf]"></span> </h6>
 
 </div>
 
@@ -341,7 +436,7 @@ justify-self: end;
 
 
     <div class="">
-<h1 class="text-3xl font-bold ">Nike Revolution </h1>
+<h1  class="text-3xl font-bold ">Nike Revolution </h1>
 <p  class="text-semibold pt-3">Men's Shoe</p>
 <div class="flex">
 <img class="-mt-[35px]" height="0" width="110px" src="images/star.png" alt="">
@@ -387,9 +482,9 @@ justify-self: end;
 
 
 
-<div onclick="displaymainpg('5thcontainer')" class="flex cursor-pointer flex-col items-center"> 
+<div onclick="displaymainpg('5thcontainer')" class="flex cursor-pointer hover:text-blue-700 flex-col items-center"> 
     <img width="50px" src="images/icons8-nike-100.png" alt="">
-<h6 class="font-bold text-lg">Shoe <span  class="text-[#2749cf]">Daisy</span> </h6>
+<h6 class="font-bold text-lg"> Home<span  class="text-[#2749cf]"></span> </h6>
 
 </div>
 
@@ -462,9 +557,9 @@ justify-self: end;
 
 
 
-<div onclick="displaymainpg('6thcontainer')" class="flex cursor-pointer flex-col items-center"> 
+<div onclick="displaymainpg('6thcontainer')" class="flex cursor-pointer hover:text-blue-700 flex-col items-center"> 
     <img width="50px" src="images/icons8-nike-100.png" alt="">
-<h6 class="font-bold text-lg">Shoe <span  class="text-[#2749cf]">Daisy</span> </h6>
+<h6 class="font-bold text-lg">Home <span  class="text-[#2749cf]"></span> </h6>
 
 </div>
 
@@ -535,9 +630,9 @@ justify-self: end;
 
 
 
-<div onclick="displaymainpg('7thcontainer')" class="flex cursor-pointer flex-col items-center"> 
+<div onclick="displaymainpg('7thcontainer')" class="flex cursor-pointer hover:text-blue-700 flex-col items-center"> 
     <img width="50px" src="images/icons8-nike-100.png" alt="">
-<h6 class="font-bold text-lg">Shoe <span  class="text-[#2749cf]">Daisy</span> </h6>
+<h6 class="font-bold text-lg">Home <span  class="text-[#2749cf]"></span> </h6>
 
 </div>
 
@@ -594,6 +689,9 @@ justify-self: end;
     </div>
 </div>
 </div>
+
+
+
 <script src="script.js"></script>
 </body>
 </html>
