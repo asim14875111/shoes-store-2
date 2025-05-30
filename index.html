@@ -88,22 +88,86 @@ footer{
     color: white;
     margin-top: 90px;
 }
-.scrollable{
+/* .scrollable{
     max-width: 920px;
     justify-self: center;
     animation: scroll 10s linear infinite;
-}
+} */
 
-@keyframes scroll {
- left{
-    transform: translate(-100%);
+/* @keyframes scroll {
+ to{
+    transform: translateX(-100%);
 }    
+} */
+/* 
+
+.scrollable{
+display: flex;
+justify-self: center;
+max-width: 70%;
+--gap:20px;
+gap:var(--gap);
 }
 
+
+.scrolling-div{
+min-width: 50%;
+justify-self: center;
+animation: scroll 20s linear infinite;
+gap: var(--gap);
+}
+
+.scrolling-div:hover{
+    animation-play-state: paused;
+}
+
+
+@keyframes scroll{
+    to{
+        transform: translateX(calc(-100% - var(--gap)));
+    }
+    
+} */
+.carousel{
+margin: 0 auto;
+max-width: 980px;
+display: flex;
+gap:10px;
+padding-bottom: 50px;
+overflow: hidden;
+    > * {
+        flex: 0 0 100%;
+    }
+    &:hover .group{
+        animation-play-state:paused ;
+    }
+
+}
+
+
+
+.group{
+    display: flex;
+    gap: 27px;
+    padding: 10px;
+    will-change: transform;
+    animation: scrolling 30s linear infinite;
+}
+
+@keyframes scrolling {
+    0%{
+        transform: translateX(0);
+
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+    
+}
 
 </style>
 <body>
-<div id="container" class="main-page">
+<div id="container"    class="main-page">
         <nav class="flex justify-between items-center pt-4 px-16 bg-[#dcdcdc]">
 <div>
     <img width="65px" src="images/icons8-nike-50.png" ></div>
@@ -158,10 +222,11 @@ footer{
     <img  class="w-[80%]" src="images/Capture.PNG" alt="">
 </div>
 </div>
-<div class="scrollable">
-<marquee behavior="" direction="">
-<div  class="grid grid-cols-4  pb-20 justify-self-center gap-10 -ml-[25px]">
-<div class="border rounded w-fit">
+<!-- <div class="scrollable"> -->
+<!-- <marquee behavior="" direction=""> -->
+    <div class="carousel">
+<div class="group">
+<div class="border rounded w-full">
     <img class="shoes-img"  width="220px" src="images/pexels-melvin-buezo-1253763-2529148.jpg" alt="">
     <div class="px-3 pt-2">
     <h5 class="text-2xl font-semibold">
@@ -172,7 +237,7 @@ footer{
 <button id="second-urlbtn" onclick="chngcontent('4thcontainer')"  class="text-center w-full bg-[#252629] text-white rounded mt-8 mb-3 py-1 hover:bg-[#515257]" >Buy Now</button>
 </div>
 </div>
-<div class="border rounded w-fit">
+<div class="border rounded w-full">
     <img  width="220px" src="images/imani-bahati-LxVxPA1LOVM-unsplash.jpg" alt="">
     <div class="px-3 pt-2">
     <h5 class="text-2xl font-semibold">
@@ -183,7 +248,7 @@ footer{
 <button id="third-btn" onclick="chngcontent('5thcontainer')" class="text-center w-full bg-[#252629] text-white rounded mt-8 mb-3 py-1 hover:bg-[#515257]" >Buy Now</button>
 </div>
 </div>
-<div class="border rounded w-fit">
+<div class="border rounded w-full">
     <img class="shoes-img"  width="220px" src="images/george-catalina-1vHAP0oeUQE-unsplash.jpg" alt="">
     <div class="px-3 pt-2">
     <h5 class="text-2xl font-semibold">
@@ -194,7 +259,7 @@ footer{
 <button id="airjrdn-btn" onclick="chngcontent('6thcontainer')" class="text-center w-full bg-[#252629] text-white rounded mt-8 mb-3 py-1 hover:bg-[#515257]" >Buy Now</button>
 </div>
 </div>
-<div class="border rounded w-fit">
+<div class="border rounded w-full">
     <img class="shoes-img" width="220px" src="images/usama-akram-kP6knT7tjn4-unsplash.jpg" alt="">
     <div class="px-3 pt-2">
     <h5 class="text-2xl font-semibold">
@@ -206,8 +271,55 @@ footer{
 </div>
 </div>
 </div>
-</marquee>
+<div aria-hidden class="group">
+<div class="border rounded w-full">
+    <img class="shoes-img"  width="220px" src="images/pexels-melvin-buezo-1253763-2529148.jpg" alt="">
+    <div class="px-3 pt-2">
+    <h5 class="text-2xl font-semibold">
+        Nike Revolution 
+    </h5>
+
+    <h6 class="font-semibold text-xl">$20</h6>
+<button id="second-urlbtn" onclick="chngcontent('4thcontainer')"  class="text-center w-full bg-[#252629] text-white rounded mt-8 mb-3 py-1 hover:bg-[#515257]" >Buy Now</button>
 </div>
+</div>
+<div class="border rounded w-full">
+    <img  width="220px" src="images/imani-bahati-LxVxPA1LOVM-unsplash.jpg" alt="">
+    <div class="px-3 pt-2">
+    <h5 class="text-2xl font-semibold">
+        Nike Revolution 3
+    </h5>
+
+    <h6 class="font-semibold text-xl">$35</h6>
+<button id="third-btn" onclick="chngcontent('5thcontainer')" class="text-center w-full bg-[#252629] text-white rounded mt-8 mb-3 py-1 hover:bg-[#515257]" >Buy Now</button>
+</div>
+</div>
+<div class="border rounded w-full">
+    <img class="shoes-img"  width="220px" src="images/george-catalina-1vHAP0oeUQE-unsplash.jpg" alt="">
+    <div class="px-3 pt-2">
+    <h5 class="text-2xl font-semibold">
+        Air Jordan
+    </h5>
+
+    <h6 class="font-semibold text-xl">$15</h6>
+<button id="airjrdn-btn" onclick="chngcontent('6thcontainer')" class="text-center w-full bg-[#252629] text-white rounded mt-8 mb-3 py-1 hover:bg-[#515257]" >Buy Now</button>
+</div>
+</div>
+<div class="border rounded w-full">
+    <img class="shoes-img" width="220px" src="images/usama-akram-kP6knT7tjn4-unsplash.jpg" alt="">
+    <div class="px-3 pt-2">
+    <h5 class="text-2xl font-semibold">
+        Nike Sports
+    </h5>
+
+    <h6 class="font-semibold text-xl">$22</h6>
+<button id="sports-btn" onclick="chngcontent('7thcontainer')" class="text-center w-full bg-[#252629] text-white rounded mt-8 mb-3 py-1 hover:bg-[#515257]" >Buy Now</button>
+</div>
+</div>
+</div>
+</div>
+<!-- </marquee> -->
+<!-- </div> -->
 
 <div class="flex flex-col justify-self-center justify-center">
 <h5 class="second-last-footer-element" > Never miss <br> a drop.</h5>
@@ -300,7 +412,7 @@ footer{
 
 
 
-    <div class="pt-10">
+    <div class="pt-10 w-[500px]">
 <h1 class="text-3xl font-bold ">Nine Waffle One</h1>
 <p  class="text-semibold pt-3">Men's Shoe</p>
 <div class="flex">
@@ -316,23 +428,79 @@ footer{
 
     </div>
 </div>
+<div class="pb-4">
+<p>Sizes</p>
+<div class="flex gap-2">
+
+    <p class="border rounded-full cursor-pointer px-1 hover:bg-gray-200">06</p>
+    <p class="border rounded-full cursor-pointer  px-1 hover:bg-gray-200">07</p>
+    <p class="border rounded-full cursor-pointer bg-black text-white  px-1">08</p>
+    <p class="border rounded-full cursor-pointer  px-1 hover:bg-gray-200">09</p>
+    <p class="border rounded-full cursor-pointer  px-1 hover:bg-gray-200">10</p>
+    <p class="border rounded-full cursor-pointer  px-1 hover:bg-gray-200">11</p>
+</div>
+</div>
 <div>
+<div class="gap-2">
+        <span class="text-lg font-bold">Product price</span>
 <p  class="font-bold">
     $
     <span
      id="price" class="font-extrabold text-3xl pt-6 pb-6">
-       250</span>
+       180</span>
        </p>
+       </div>
+       <div class="flex justify-between pt-2">
+        <p class="text-lg">Shipping</p>
+        <p class="text-lg">USD 30</p>
+       </div>
+       <div class="flex justify-between pt-2">
+        <p class="text-lg">Tarrifs + taxes</p>
+        <p class="text-lg">USD 40</p>
+       </div>
+       <div class="flex justify-between pt-2">
+        <p class="font-bold text-lg">Total price</p>
+        <pc class="font-bold text-lg">USD 250 x 1</pc>
+       </div>
 </div>
-<p>Bringing a new look to the Waffle sneaker family, the Nike Waffle One <br> balances everything you love about heritage Nike runnign with fresh <br> innovations.Its TPU heel clip adds energy while a mixture of transp<br>arent mesh (let that sock game shine) and retro suedes give texture <br> and depth. The updated Waffle outsole provides a level of support <br> and traction you have to feel to believe </p>
+<!-- <p>Bringing a new look to the Waffle sneaker family, the Nike Waffle One <br> balances everything you love about heritage Nike runnign with fresh <br> innovations.Its TPU heel clip adds energy while a mixture of transp<br>arent mesh (let that sock game shine) and retro suedes give texture <br> and depth. The updated Waffle outsole provides a level of support <br> and traction you have to feel to believe </p> -->
 
 <p class="pt-4 pb-3 text-sm font-bold flex gap-2 items-center">Delivery <span class="text-[#8c8d91]">(5/7 days)</span></p>
 <div  class="pt-4">
-<button id="main-img-button" onclick="addtocart('addtocart2')" class="bg-[#323336] text-white w-full py-2 rounded-md hover:bg-[#4c4d52]">Add to cart</button>
+<button  id="main-img-button" onclick="addtocart('addtocart2')" class="bg-[#323336] text-white w-full py-2 rounded-md add-to-cart-btn hover:bg-[#4c4d52]">Add to cart</button>
 </div>
 
     </div>
 </div>
+
+<footer class="flex flex-col pt-6 justify-self-center">
+    <div class="flex flex-col items-center">
+    <img width="80px" src="images/icons8-nike-100.png" alt="">
+<ul class="flex gap-6 pt-4">
+    <li class="text-xl cursor-pointer    hover:text-blue-400 font-thin">About</li>
+    <li class="text-xl cursor-pointer    hover:text-blue-400 font-thin">How it Works</li>
+    <li class="text-xl cursor-pointer    hover:text-blue-400 font-thin">FAQ</li>
+    <li class="text-xl cursor-pointer    hover:text-blue-400 font-thin">Support</li>
+    <li class="text-xl cursor-pointer    hover:text-blue-400 font-thin">Terms</li>
+    <li class="text-xl cursor-pointer    hover:text-blue-400 font-thin">Privacy</li>
+    <li class="text-xl cursor-pointer    hover:text-blue-400 font-thin">Shipping</li>
+    <li class="text-xl cursor-pointer    hover:text-blue-400 font-thin">Returns</li>
+    <li class="text-xl cursor-pointer    hover:text-blue-400 font-thin">Sitemap</li>
+ </ul>
+<div class="flex gap-4 pt-4">
+<img  src="images/icons8-visa-50 (1).png" alt="">
+<img src="images/icons8-mastercard-50.png" alt="">
+<img src="images/icons8-stripe-50.png" alt="">
+<svg class="w-12 h-12"  xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0,0,256,256">
+<g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M5,7c-2.75,0 -5,2.25 -5,5v26c0,2.75 2.25,5 5,5h40c2.75,0 5,-2.25 5,-5v-26c0,-2.75 -2.25,-5 -5,-5zM5,9h40c1.66797,0 3,1.33203 3,3v26c0,1.66797 -1.33203,3 -3,3h-40c-1.66797,0 -3,-1.33203 -3,-3v-26c0,-1.66797 1.33203,-3 3,-3zM8.5625,19.90625l-3.71875,8.5h2.21875l0.8125,-1.90625h4.1875l0.8125,1.90625h4.21875v-6.3125l2.8125,6.3125h1.90625l2.84375,-6.21875v6.21875h2.09375v-8.5h-3.34375l-2.5625,5.71875l-2.5625,-5.71875h-3.28125v8.1875l-3.65625,-8.1875zM29.5,19.90625v8.53125h8l2.5,-2.84375l2.46875,2.84375h2.65625l-3.75,-4.375l3.75,-4.15625h-2.65625l-2.40625,2.65625l-2.3125,-2.65625zM9.90625,21.6875l1.3125,3h-2.5625zM31.5625,21.71875l5.09375,0.03125l2.03125,2.3125l-2.28125,2.5625h-4.84375v-1.6875h4.625v-1.625h-4.625z"></path></g></g>
+</svg>
+</div>
+
+<h6 class="font-extralight text-sm text-blue-300 pt-6 pb-10 ">&copy;Nike.com.All rights  Reserved.</h6>
+
+</div>
+</footer>
+
 </div>
 <div id="3rdcontainer" class="container2"> 
 <nav class="flex justify-between py-0 px-14 items-center">
@@ -375,7 +543,7 @@ footer{
 
 
 
-    <div class="pt-10">
+    <div class="pb-10  w-[580px]">
 <h1 class="text-3xl font-bold ">Nike Revolution 5</h1>
 <p  class="text-semibold pt-3">Men's Shoe</p>
 <div class="flex">
@@ -387,27 +555,83 @@ footer{
     <div  class="add-subtract flex items-center gap-4 border-[0.5px] border-black px-[3px] rounded">
         <h6 onclick="minus('counter2','price2')" class="cursor-pointer"><img width="15px" src="images/icons8-minus-24.png" alt=""></h6>
 <p  id="counter2">1</p>
-<h6 onclick="add('counter2','price2')" class="cursor-pointer"><img width="15px" src="images/icons8-add-50.png" alt=""></h6>
+<h6 class="cursor-pointer add-btn"><img width="15px" src="images/icons8-add-50.png" alt=""></h6>
 
     </div>
 </div>
+<div class="pb-4">
+<p>Sizes</p>
+<div class="flex gap-2">
+
+    <p class="border rounded-full cursor-pointer px-1 hover:bg-gray-200">06</p>
+    <p class="border rounded-full cursor-pointer  px-1 hover:bg-gray-200">07</p>
+    <p class="border rounded-full cursor-pointer bg-black text-white  px-1">08</p>
+    <p class="border rounded-full cursor-pointer  px-1 hover:bg-gray-200">09</p>
+    <p class="border rounded-full cursor-pointer  px-1 hover:bg-gray-200">10</p>
+    <p class="border rounded-full cursor-pointer  px-1 hover:bg-gray-200">11</p>
+</div>
+
+</div>
+
+
 <div>
+<div class="gap-2">
+        <span class="text-lg font-bold">Product price</span>
 <p  class="font-bold">
     $
     <span
-     id="price2" class="font-extrabold text-3xl pt-6 pb-6">
-       250</span>
+     id="price" class="font-extrabold text-3xl pt-6 pb-6">
+       180</span>
        </p>
+       </div>
+       <div class="flex justify-between pt-2">
+        <p class="text-lg">Shipping</p>
+        <p class="text-lg">USD 30</p>
+       </div>
+       <div class="flex justify-between pt-2">
+        <p class="text-lg">Tarrifs + taxes</p>
+        <p class="text-lg">USD 40</p>
+       </div>
+       <div class="flex justify-between pt-2">
+        <p class="font-bold text-lg">Total price</p>
+        <pc class="font-bold text-lg">USD 250 x 1</pc>
+       </div>
 </div>
-<p>Bringing a new look to the nike revolution 5, the nike revolution 5 balances everything you love <br> about heritage Nike runnign with fresh innovations.Its TPU heel clip adds energy while <br> a mixture of transparent mesh (let that sock game shine) and retro suedes  give texture  and depth. <br> The updated  revolution  outsole provides a level of support  and traction you have to feel to believe </p>
 
 <p class="pt-4 pb-3 text-sm font-bold flex gap-2 items-center">Delivery <span class="text-[#8c8d91]">(5/7 days)</span></p>
-<div  class="pt-[4.9rem]">
-<button onclick="addtocart('addtocart3')" class="bg-[#323336] text-white w-full py-2 rounded-md hover:bg-[#4c4d52]">Add to cart</button>
+<div  class="pt-[0.9rem]">
+<button onclick="addtocart('addtocart3')" class="bg-[#323336] add-to-cart-btn text-white w-full py-2 rounded-md hover:bg-[#4c4d52]">Add to cart</button>
 </div>
 
     </div>
 </div>
+<footer class="flex flex-col pt-6 justify-self-center">
+    <div class="flex flex-col items-center">
+    <img width="80px" src="images/icons8-nike-100.png" alt="">
+<ul class="flex gap-6 pt-4">
+    <li class="text-xl cursor-pointer    hover:text-blue-400 font-thin">About</li>
+    <li class="text-xl cursor-pointer    hover:text-blue-400 font-thin">How it Works</li>
+    <li class="text-xl cursor-pointer    hover:text-blue-400 font-thin">FAQ</li>
+    <li class="text-xl cursor-pointer    hover:text-blue-400 font-thin">Support</li>
+    <li class="text-xl cursor-pointer    hover:text-blue-400 font-thin">Terms</li>
+    <li class="text-xl cursor-pointer    hover:text-blue-400 font-thin">Privacy</li>
+    <li class="text-xl cursor-pointer    hover:text-blue-400 font-thin">Shipping</li>
+    <li class="text-xl cursor-pointer    hover:text-blue-400 font-thin">Returns</li>
+    <li class="text-xl cursor-pointer    hover:text-blue-400 font-thin">Sitemap</li>
+ </ul>
+<div class="flex gap-4 pt-4">
+<img  src="images/icons8-visa-50 (1).png" alt="">
+<img src="images/icons8-mastercard-50.png" alt="">
+<img src="images/icons8-stripe-50.png" alt="">
+<svg class="w-12 h-12"  xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0,0,256,256">
+<g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M5,7c-2.75,0 -5,2.25 -5,5v26c0,2.75 2.25,5 5,5h40c2.75,0 5,-2.25 5,-5v-26c0,-2.75 -2.25,-5 -5,-5zM5,9h40c1.66797,0 3,1.33203 3,3v26c0,1.66797 -1.33203,3 -3,3h-40c-1.66797,0 -3,-1.33203 -3,-3v-26c0,-1.66797 1.33203,-3 3,-3zM8.5625,19.90625l-3.71875,8.5h2.21875l0.8125,-1.90625h4.1875l0.8125,1.90625h4.21875v-6.3125l2.8125,6.3125h1.90625l2.84375,-6.21875v6.21875h2.09375v-8.5h-3.34375l-2.5625,5.71875l-2.5625,-5.71875h-3.28125v8.1875l-3.65625,-8.1875zM29.5,19.90625v8.53125h8l2.5,-2.84375l2.46875,2.84375h2.65625l-3.75,-4.375l3.75,-4.15625h-2.65625l-2.40625,2.65625l-2.3125,-2.65625zM9.90625,21.6875l1.3125,3h-2.5625zM31.5625,21.71875l5.09375,0.03125l2.03125,2.3125l-2.28125,2.5625h-4.84375v-1.6875h4.625v-1.625h-4.625z"></path></g></g>
+</svg>
+</div>
+
+<h6 class="font-extralight text-sm text-blue-300 pt-6 pb-10 ">&copy;Nike.com.All rights  Reserved.</h6>
+
+</div>
+</footer>
 </div>
 <div id="4thcontainer" class="container2"> 
 <nav class="flex justify-between py-0 px-14 items-center">
@@ -427,7 +651,6 @@ footer{
 <h6 class="font-bold text-lg">Home <span  class="text-[#2749cf]"></span> </h6>
 
 </div>
-
 
 <div class="flex gap-4 ">
 <img class="imgs" src="images/icons8-contacts-32.png">
@@ -449,7 +672,7 @@ footer{
 
 
 
-    <div class="">
+    <div class="w-[570px]">
 <h1  class="text-3xl font-bold ">Nike Revolution </h1>
 <p  class="text-semibold pt-3">Men's Shoe</p>
 <div class="flex">
@@ -461,32 +684,97 @@ footer{
     <div  class="add-subtract flex items-center gap-4 border-[0.5px] border-black px-[3px] rounded">
         <h6 onclick="minus('counter3','price3')" class="cursor-pointer"><img width="15px" src="images/icons8-minus-24.png" alt=""></h6>
 <p  id="counter3">1</p>
-<h6 onclick="add('counter3','price3')" class="cursor-pointer"><img width="15px" src="images/icons8-add-50.png" alt=""></h6>
+<h6 class="cursor-pointer add-btn"><img width="15px" src="images/icons8-add-50.png" alt=""></h6>
 
     </div>
 </div>
 <div>
-<p  class="font-bold">
+<!-- <p  class="font-bold">
     $
     <span
      id="price3" class="font-extrabold text-3xl pt-6 pb-6">
        250</span>
-       </p>
+       </p> -->
+       
+       
+       
+       <div>
+           <div class="gap-2">
+               <span class="text-lg font-bold">Product price</span>
+               <p class="font-bold">
+                   $
+                   <span id="price" class="font-extrabold text-3xl pt-6 pb-6">
+                       180</span>
+                    </p>
+                </div>
+                <div class="pb-4">
+                <p>Sizes</p>
+                <div class="flex gap-2">
+                
+                    <p class="border rounded-full cursor-pointer px-1 hover:bg-gray-200">06</p>
+                    <p class="border rounded-full cursor-pointer  px-1 hover:bg-gray-200">07</p>
+                    <p class="border rounded-full cursor-pointer bg-black text-white  px-1">08</p>
+                    <p class="border rounded-full cursor-pointer  px-1 hover:bg-gray-200">09</p>
+                    <p class="border rounded-full cursor-pointer  px-1 hover:bg-gray-200">10</p>
+                    <p class="border rounded-full cursor-pointer  px-1 hover:bg-gray-200">11</p>
+                </div>
+                </div>
+       </div>
+       <div class="flex justify-between pt-2">
+        <p class="text-lg">Shipping</p>
+        <p class="text-lg">USD 30</p>
+       </div>
+       <div class="flex justify-between pt-2">
+        <p class="text-lg">Tarrifs + taxes</p>
+        <p class="text-lg">USD 40</p>
+       </div>
+       <div class="flex justify-between pt-2">
+        <p class="font-bold text-lg">Total price</p>
+        <pc class="font-bold text-lg">USD 250 x 1</pc>
+       </div>
 </div>
-<p>Bringing a new look to the nike revolution 5, the nike revolution 5 balances everything you love <br> about heritage Nike runnign with fresh innovations.Its TPU heel clip adds energy while <br> a mixture of transparent mesh (let that sock game shine) and retro suedes  give texture  and depth. <br> The updated  revolution  outsole provides a level of support  and traction you have to feel to believe  </p>
+<!-- <p>Bringing a new look to the nike revolution 5, the nike revolution 5 balances everything you love <br> about heritage Nike runnign with fresh innovations.Its TPU heel clip adds energy while <br> a mixture of transparent mesh (let that sock game shine) and retro suedes  give texture  and depth. <br> The updated  revolution  outsole provides a level of support  and traction you have to feel to believe  </p> -->
+
+
 
 <p class="pt-4 pb-3 text-sm font-bold flex gap-2 items-center">Delivery <span class="text-[#8c8d91]">(5/7 days)</span></p>
-<div  class="pt-[5.2rem]">
-<button onclick="addtocart('addtocart4')" class="bg-[#323336] text-white w-full py-2 rounded-md hover:bg-[#4c4d52]">Add to cart</button>
+<div  class="pt-[3.2rem]">
+<button onclick="addtocart('addtocart4')" class="bg-[#323336] text-white w-full py-2 rounded-md hover:bg-[#4c4d52] add-to-cart-btn">Add to cart</button>
 </div>
 
     </div>
 </div>
+<footer class="flex flex-col pt-6 justify-self-center">
+    <div class="flex flex-col items-center">
+    <img width="80px" src="images/icons8-nike-100.png" alt="">
+<ul class="flex gap-6 pt-4">
+    <li class="text-xl cursor-pointer    hover:text-blue-400 font-thin">About</li>
+    <li class="text-xl cursor-pointer    hover:text-blue-400 font-thin">How it Works</li>
+    <li class="text-xl cursor-pointer    hover:text-blue-400 font-thin">FAQ</li>
+    <li class="text-xl cursor-pointer    hover:text-blue-400 font-thin">Support</li>
+    <li class="text-xl cursor-pointer    hover:text-blue-400 font-thin">Terms</li>
+    <li class="text-xl cursor-pointer    hover:text-blue-400 font-thin">Privacy</li>
+    <li class="text-xl cursor-pointer    hover:text-blue-400 font-thin">Shipping</li>
+    <li class="text-xl cursor-pointer    hover:text-blue-400 font-thin">Returns</li>
+    <li class="text-xl cursor-pointer    hover:text-blue-400 font-thin">Sitemap</li>
+ </ul>
+<div class="flex gap-4 pt-4">
+<img  src="images/icons8-visa-50 (1).png" alt="">
+<img src="images/icons8-mastercard-50.png" alt="">
+<img src="images/icons8-stripe-50.png" alt="">
+<svg class="w-12 h-12"  xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0,0,256,256">
+<g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M5,7c-2.75,0 -5,2.25 -5,5v26c0,2.75 2.25,5 5,5h40c2.75,0 5,-2.25 5,-5v-26c0,-2.75 -2.25,-5 -5,-5zM5,9h40c1.66797,0 3,1.33203 3,3v26c0,1.66797 -1.33203,3 -3,3h-40c-1.66797,0 -3,-1.33203 -3,-3v-26c0,-1.66797 1.33203,-3 3,-3zM8.5625,19.90625l-3.71875,8.5h2.21875l0.8125,-1.90625h4.1875l0.8125,1.90625h4.21875v-6.3125l2.8125,6.3125h1.90625l2.84375,-6.21875v6.21875h2.09375v-8.5h-3.34375l-2.5625,5.71875l-2.5625,-5.71875h-3.28125v8.1875l-3.65625,-8.1875zM29.5,19.90625v8.53125h8l2.5,-2.84375l2.46875,2.84375h2.65625l-3.75,-4.375l3.75,-4.15625h-2.65625l-2.40625,2.65625l-2.3125,-2.65625zM9.90625,21.6875l1.3125,3h-2.5625zM31.5625,21.71875l5.09375,0.03125l2.03125,2.3125l-2.28125,2.5625h-4.84375v-1.6875h4.625v-1.625h-4.625z"></path></g></g>
+</svg>
+</div>
+
+<h6 class="font-extralight text-sm text-blue-300 pt-6 pb-10 ">&copy;Nike.com.All rights  Reserved.</h6>
+
+</div>
+</footer>
 </div>
 <div id="5thcontainer" class="container2"> 
 <nav class="flex justify-between py-0 px-14 items-center">
-
-    <div class="flex gap-4">
+<div class="flex gap-4">
 <h6>Sports</h6>
 <h6>Running</h6>
 <h6>Casuals</h6>
@@ -511,20 +799,18 @@ footer{
 <p class="addtocart" id="addtocart5"></p>
 </div>
 </div>
-
-
 </nav>
 
 <div  class="flex justify-start pl-[58px] gap-20 pt-10">
     <div class="w-[47%] h-5/12">
      
        
-                <img id="rotated-img" class="main-img"  src="images/imani-bahati-LxVxPA1LOVM-unsplash.jpg" alt="">
+                <img id="rotated-img" class="main-img"  src="images/imani-bahati-LxVxP/'A1LOVM-unsplash.jpg" alt="shoes-img">
     </div>
 
 
 
-    <div class="pt-10">
+    <div class="pt-10 w-[500px]">
 <h1 class="text-3xl font-bold ">Nike Revolution 3 </h1>
 <p  class="text-semibold pt-3">Men's Shoe</p>
 <div class="flex">
@@ -536,27 +822,90 @@ footer{
     <div  class="add-subtract flex items-center gap-4 border-[0.5px] border-black px-[3px] rounded">
         <h6 onclick="minus('counter5','price5')" class="cursor-pointer"><img width="15px" src="images/icons8-minus-24.png" alt=""></h6>
 <p  id="counter5">1</p>
-<h6 onclick="add('counter5','price5')" class="cursor-pointer"><img width="15px" src="images/icons8-add-50.png" alt=""></h6>
+<h6  class="cursor-pointer add-btn"><img width="15px" src="images/icons8-add-50.png" alt=""></h6>
 
     </div>
 </div>
-<div>
+<!-- <div>
 <p  class="font-bold">
     $
     <span
      id="price5" class="font-extrabold text-3xl pt-6 pb-6">
        250</span>
        </p>
+</div> -->
+<!-- <p>Bringing a new look to the nike revolution 3 , the nike revolution  <br> balances everything you love about heritage Nike runnign with fresh <br> innovations.Its TPU heel clip adds energy while a mixture of transp<br>arent mesh (let that sock game shine) and retro suedes give texture <br> and depth. The updated  revolution  outsole provides a level of support <br> and traction you have to feel to believe </p> -->
+
+
+ <div>
+    <div class="gap-2">
+        <span class="text-lg font-bold">Product price</span>
+        <p class="font-bold">
+            $
+            <span id="price" class="font-extrabold text-3xl pt-6 pb-6">
+                180</span>
+            </p>
+            <div class="pb-4">
+            <p>Sizes</p>
+            <div class="flex gap-2">
+            
+               <p class="border rounded-full cursor-pointer px-1 hover:bg-gray-200">06</p>
+               <p class="border rounded-full cursor-pointer  px-1 hover:bg-gray-200">07</p>
+               <p class="border rounded-full cursor-pointer bg-black text-white  px-1">08</p>
+               <p class="border rounded-full cursor-pointer  px-1 hover:bg-gray-200">09</p>
+               <p class="border rounded-full cursor-pointer  px-1 hover:bg-gray-200">10</p>
+               <p class="border rounded-full cursor-pointer  px-1 hover:bg-gray-200">11</p>
+            </div>
+            </div>
+       </div>
+       <div class="flex justify-between pt-2">
+        <p class="text-lg">Shipping</p>
+        <p class="text-lg">USD 30</p>
+       </div>
+       <div class="flex justify-between pt-2">
+        <p class="text-lg">Tarrifs + taxes</p>
+        <p class="text-lg">USD 40</p>
+       </div>
+       <div class="flex justify-between pt-2">
+        <p class="font-bold text-lg">Total price</p>
+        <pc class="font-bold text-lg">USD 250 x 1</pc>
+       </div>
 </div>
-<p>Bringing a new look to the nike revolution 3 , the nike revolution  <br> balances everything you love about heritage Nike runnign with fresh <br> innovations.Its TPU heel clip adds energy while a mixture of transp<br>arent mesh (let that sock game shine) and retro suedes give texture <br> and depth. The updated  revolution  outsole provides a level of support <br> and traction you have to feel to believe </p>
 
 <p class="pt-4 pb-3 text-sm font-bold flex gap-2 items-center">Delivery <span class="text-[#8c8d91]">(5/7 days)</span></p>
 <div  class="pt-4">
-<button onclick="addtocart('addtocart5')" class="bg-[#323336] text-white w-full py-2 rounded-md hover:bg-[#4c4d52]">Add to cart</button>
+<button onclick="addtocart('addtocart5')" class="bg-[#323336] text-white w-full py-2 rounded-md hover:bg-[#4c4d52] add-to-cart-btn">Add to cart</button>
 </div>
 
     </div>
 </div>
+<footer class="flex flex-col pt-6 justify-self-center">
+    <div class="flex flex-col items-center">
+    <img width="80px" src="images/icons8-nike-100.png" alt="">
+<ul class="flex gap-6 pt-4">
+    <li class="text-xl cursor-pointer    hover:text-blue-400 font-thin">About</li>
+    <li class="text-xl cursor-pointer    hover:text-blue-400 font-thin">How it Works</li>
+    <li class="text-xl cursor-pointer    hover:text-blue-400 font-thin">FAQ</li>
+    <li class="text-xl cursor-pointer    hover:text-blue-400 font-thin">Support</li>
+    <li class="text-xl cursor-pointer    hover:text-blue-400 font-thin">Terms</li>
+    <li class="text-xl cursor-pointer    hover:text-blue-400 font-thin">Privacy</li>
+    <li class="text-xl cursor-pointer    hover:text-blue-400 font-thin">Shipping</li>
+    <li class="text-xl cursor-pointer    hover:text-blue-400 font-thin">Returns</li>
+    <li class="text-xl cursor-pointer    hover:text-blue-400 font-thin">Sitemap</li>
+ </ul>
+<div class="flex gap-4 pt-4">
+<img  src="images/icons8-visa-50 (1).png" alt="">
+<img src="images/icons8-mastercard-50.png" alt="">
+<img src="images/icons8-stripe-50.png" alt="">
+<svg class="w-12 h-12"  xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0,0,256,256">
+<g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M5,7c-2.75,0 -5,2.25 -5,5v26c0,2.75 2.25,5 5,5h40c2.75,0 5,-2.25 5,-5v-26c0,-2.75 -2.25,-5 -5,-5zM5,9h40c1.66797,0 3,1.33203 3,3v26c0,1.66797 -1.33203,3 -3,3h-40c-1.66797,0 -3,-1.33203 -3,-3v-26c0,-1.66797 1.33203,-3 3,-3zM8.5625,19.90625l-3.71875,8.5h2.21875l0.8125,-1.90625h4.1875l0.8125,1.90625h4.21875v-6.3125l2.8125,6.3125h1.90625l2.84375,-6.21875v6.21875h2.09375v-8.5h-3.34375l-2.5625,5.71875l-2.5625,-5.71875h-3.28125v8.1875l-3.65625,-8.1875zM29.5,19.90625v8.53125h8l2.5,-2.84375l2.46875,2.84375h2.65625l-3.75,-4.375l3.75,-4.15625h-2.65625l-2.40625,2.65625l-2.3125,-2.65625zM9.90625,21.6875l1.3125,3h-2.5625zM31.5625,21.71875l5.09375,0.03125l2.03125,2.3125l-2.28125,2.5625h-4.84375v-1.6875h4.625v-1.625h-4.625z"></path></g></g>
+</svg>
+</div>
+
+<h6 class="font-extralight text-sm text-blue-300 pt-6 pb-10 ">&copy;Nike.com.All rights  Reserved.</h6>
+
+</div>
+</footer>
 </div>
 <div id="6thcontainer" class="container2"> 
 <nav class="flex justify-between py-0 px-14 items-center">
@@ -597,7 +946,7 @@ footer{
 
 
 
-    <div class="">
+    <div class="w-[500px]">
 <h1 class="text-3xl font-bold ">Air Jordan </h1>
 <p  class="text-semibold pt-3">Men's Shoe</p>
 <div class="flex">
@@ -609,11 +958,11 @@ footer{
     <div  class="add-subtract flex items-center gap-4 border-[0.5px] border-black px-[3px] rounded">
         <h6 onclick="minus('counter6','price6')" class="cursor-pointer"><img width="15px" src="images/icons8-minus-24.png" alt=""></h6>
 <p  id="counter6">1</p>
-<h6 onclick="add('counter6','price6')" class="cursor-pointer"><img width="15px" src="images/icons8-add-50.png" alt=""></h6>
+<h6 class="cursor-pointer add-btn"><img width="15px" src="images/icons8-add-50.png" alt=""></h6>
 
     </div>
 </div>
-<div>
+<!-- <div>
 <p  class="font-bold">
     $
     <span
@@ -621,21 +970,86 @@ footer{
        250</span>
        </p>
 </div>
-<p>Bringing a  look to the Air Jordan , the nike jordan  <br> balances everything you love about heritage Nike runnign with fresh <br> innovations.Its TPU heel clip adds energy while a mixture of transp<br>arent mesh (let that sock game shine) and retro suedes give texture <br> and depth. The updated  revolution  outsole provides a level of support <br> and traction you have to feel to believe </p>
+<p>Bringing a  look to the Air Jordan , the nike jordan  <br> balances everything you love about heritage Nike runnign with fresh <br> innovations.Its TPU heel clip adds energy while a mixture of transp<br>arent mesh (let that sock game shine) and retro suedes give texture <br> and depth. The updated  revolution  outsole provides a level of support <br> and traction you have to feel to believe </p> -->
 
-<p class="pt-4 pb-3 text-sm font-bold flex gap-2 items-center">Delivery <span class="text-[#8c8d91]">(5/7 days)</span></p>
-<div  class="pt-4">
-<button onclick="addtocart('addtocart6')" class="bg-[#323336] text-white w-full py-2 rounded-md hover:bg-[#4c4d52]">Add to cart</button>
-</div>
 
+
+
+
+<div>
+    <div class="gap-2">
+        <span class="text-lg font-bold">Product price</span>
+        <p class="font-bold">
+            $
+            <span id="price" class="font-extrabold text-3xl pt-6 pb-6">
+                180</span>
+            </p>
+            <div class="pb-4">
+            <p>Sizes</p>
+            <div class="flex gap-2">
+                
+                <p class="border rounded-full cursor-pointer px-1 hover:bg-gray-200">06</p>
+                <p class="border rounded-full cursor-pointer  px-1 hover:bg-gray-200">07</p>
+                <p class="border rounded-full cursor-pointer bg-black text-white  px-1">08</p>
+                <p class="border rounded-full cursor-pointer  px-1 hover:bg-gray-200">09</p>
+                <p class="border rounded-full cursor-pointer  px-1 hover:bg-gray-200">10</p>
+                <p class="border rounded-full cursor-pointer  px-1 hover:bg-gray-200">11</p>
+            </div>
+        </div>
+    </div>
+    <div class="flex justify-between pt-2">
+        <p class="text-lg">Shipping</p>
+        <p class="text-lg">USD 30</p>
+    </div>
+    <div class="flex justify-between pt-2">
+        <p class="text-lg">Tarrifs + taxes</p>
+        <p class="text-lg">USD 40</p>
+    </div>
+    <div class="flex justify-between pt-2">
+        <p class="font-bold text-lg">Total price</p>
+        <pc class="font-bold text-lg">USD 250 x 1</pc>
     </div>
 </div>
+<p class="pt-4 pb-3 text-sm font-bold flex gap-2 items-center">Delivery <span class="text-[#8c8d91]">(5/7 days)</span></p>
+<div  class="pt-4">
+    <button onclick="addtocart('addtocart6')" class="bg-[#323336] add-to-cart-btn text-white w-full py-2 rounded-md hover:bg-[#4c4d52]">Add to cart</button>
+</div>
+
+</div>
+</div>
+<footer class="flex flex-col pt-6 justify-self-center">
+    <div class="flex flex-col items-center">
+    <img width="80px" src="images/icons8-nike-100.png" alt="">
+<ul class="flex gap-6 pt-4">
+    <li class="text-xl cursor-pointer    hover:text-blue-400 font-thin">About</li>
+    <li class="text-xl cursor-pointer    hover:text-blue-400 font-thin">How it Works</li>
+    <li class="text-xl cursor-pointer    hover:text-blue-400 font-thin">FAQ</li>
+    <li class="text-xl cursor-pointer    hover:text-blue-400 font-thin">Support</li>
+    <li class="text-xl cursor-pointer    hover:text-blue-400 font-thin">Terms</li>
+    <li class="text-xl cursor-pointer    hover:text-blue-400 font-thin">Privacy</li>
+    <li class="text-xl cursor-pointer    hover:text-blue-400 font-thin">Shipping</li>
+    <li class="text-xl cursor-pointer    hover:text-blue-400 font-thin">Returns</li>
+    <li class="text-xl cursor-pointer    hover:text-blue-400 font-thin">Sitemap</li>
+ </ul>
+<div class="flex gap-4 pt-4">
+<img  src="images/icons8-visa-50 (1).png" alt="">
+<img src="images/icons8-mastercard-50.png" alt="">
+<img src="images/icons8-stripe-50.png" alt="">
+<svg class="w-12 h-12"  xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0,0,256,256">
+<g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M5,7c-2.75,0 -5,2.25 -5,5v26c0,2.75 2.25,5 5,5h40c2.75,0 5,-2.25 5,-5v-26c0,-2.75 -2.25,-5 -5,-5zM5,9h40c1.66797,0 3,1.33203 3,3v26c0,1.66797 -1.33203,3 -3,3h-40c-1.66797,0 -3,-1.33203 -3,-3v-26c0,-1.66797 1.33203,-3 3,-3zM8.5625,19.90625l-3.71875,8.5h2.21875l0.8125,-1.90625h4.1875l0.8125,1.90625h4.21875v-6.3125l2.8125,6.3125h1.90625l2.84375,-6.21875v6.21875h2.09375v-8.5h-3.34375l-2.5625,5.71875l-2.5625,-5.71875h-3.28125v8.1875l-3.65625,-8.1875zM29.5,19.90625v8.53125h8l2.5,-2.84375l2.46875,2.84375h2.65625l-3.75,-4.375l3.75,-4.15625h-2.65625l-2.40625,2.65625l-2.3125,-2.65625zM9.90625,21.6875l1.3125,3h-2.5625zM31.5625,21.71875l5.09375,0.03125l2.03125,2.3125l-2.28125,2.5625h-4.84375v-1.6875h4.625v-1.625h-4.625z"></path></g></g>
+</svg>
+</div>
+
+<h6 class="font-extralight text-sm text-blue-300 pt-6 pb-10 ">&copy;Nike.com.All rights  Reserved.</h6>
+
+</div>
+</footer>
 </div>
 <div id="7thcontainer" class="container2"> 
-<nav class="flex justify-between py-0 px-14 items-center">
-
+    <nav class="flex justify-between py-0 px-14 items-center">
+        
     <div class="flex gap-4">
-<h6>Sports</h6>
+        <h6>Sports</h6>
 <h6>Running</h6>
 <h6>Casuals</h6>
 
@@ -670,7 +1084,7 @@ footer{
 
 
 
-    <div class="pt-10">
+    <div class="pt-10 w-[500px]">
 <h1 class="text-3xl font-bold ">Nike Sports </h1>
 <p  class="text-semibold pt-3">Men's Shoe</p>
 <div class="flex">
@@ -682,7 +1096,7 @@ footer{
     <div  class="add-subtract flex items-center gap-4 border-[0.5px] border-black px-[3px] rounded">
         <h6 onclick="minus('counter7','price7')" class="cursor-pointer"><img width="15px" src="images/icons8-minus-24.png" alt=""></h6>
 <p id="counter7">1</p>
-<h6 onclick="add('counter7','price7')" class="cursor-pointer"><img width="15px" src="images/icons8-add-50.png" alt=""></h6>
+<h6 class="cursor-pointer add-btn"><img width="15px" src="images/icons8-add-50.png" alt=""></h6>
     </div>
 </div>
 <div>
@@ -693,19 +1107,87 @@ footer{
        250</span>
        </p>
 </div>
-<p>Bringing a  look to the nike sports shoes, the nike sports  balances everything you love about heritage Nike <br>runnign with fresh innovations.Its TPU heel clip adds energy while a mixture of transparent mesh (let <br> that sock game shine) and retro suedes give texture  and depth. The updated  revolution  outsole provides <br> a level of support and traction you have to feel to believe </p>
+<div class="pb-4">
+<p>Sizes</p>
+<div class="flex gap-2">
+
+    <p class="border rounded-full cursor-pointer px-1 hover:bg-gray-200">06</p>
+    <p class="border rounded-full cursor-pointer  px-1 hover:bg-gray-200">07</p>
+    <p class="border rounded-full cursor-pointer bg-black text-white  px-1">08</p>
+    <p class="border rounded-full cursor-pointer  px-1 hover:bg-gray-200">09</p>
+    <p class="border rounded-full cursor-pointer  px-1 hover:bg-gray-200">10</p>
+    <p class="border rounded-full cursor-pointer  px-1 hover:bg-gray-200">11</p>
+</div>
+</div>
+
+
+
+/ <div>
+<div class="gap-2">
+        <span class="text-lg font-bold">Product price</span>
+<p class="font-bold">
+    $
+    <span id="price" class="font-extrabold text-3xl pt-6 pb-6">
+       180</span>
+       </p>
+       </div>
+       <div class="flex justify-between pt-2">
+        <p class="text-lg">Shipping</p>
+        <p class="text-lg">USD 30</p>
+       </div>
+       <div class="flex justify-between pt-2">
+        <p class="text-lg">Tarrifs + taxes</p>
+        <p class="text-lg">USD 40</p>
+       </div>
+       <div class="flex justify-between pt-2">
+        <p class="font-bold text-lg">Total price</p>
+        <pc class="font-bold text-lg">USD 250 x 1</pc>
+       </div>
+</div>
 
 <p class="pt-4 pb-3 text-sm font-bold flex gap-2 items-center">Delivery <span class="text-[#8c8d91]">(5/7 days)</span></p>
 <div  class="pt-[4.5rem]">
-<button id="cartbtn" onclick="addtocart('addtocart7')" class="bg-[#323336] text-white w-full py-2 rounded-md hover:bg-[#4c4d52]">Add to cart</button>
+<button id="cartbtn" onclick="addtocart('addtocart7')" class="bg-[#323336] add-to-cart-btn text-white w-full py-2 rounded-md hover:bg-[#4c4d52]">Add to cart</button>
 </div>
 
     </div>
 </div>
+<footer class="flex flex-col pt-6 justify-self-center">
+    <div class="flex flex-col items-center">
+    <img width="80px" src="images/icons8-nike-100.png" alt="">
+<ul class="flex gap-6 pt-4">
+    <li class="text-xl cursor-pointer    hover:text-blue-400 font-thin">About</li>
+    <li class="text-xl cursor-pointer    hover:text-blue-400 font-thin">How it Works</li>
+    <li class="text-xl cursor-pointer    hover:text-blue-400 font-thin">FAQ</li>
+    <li class="text-xl cursor-pointer    hover:text-blue-400 font-thin">Support</li>
+    <li class="text-xl cursor-pointer    hover:text-blue-400 font-thin">Terms</li>
+    <li class="text-xl cursor-pointer    hover:text-blue-400 font-thin">Privacy</li>
+    <li class="text-xl cursor-pointer    hover:text-blue-400 font-thin">Shipping</li>
+    <li class="text-xl cursor-pointer    hover:text-blue-400 font-thin">Returns</li>
+    <li class="text-xl cursor-pointer    hover:text-blue-400 font-thin">Sitemap</li>
+ </ul>
+<div class="flex gap-4 pt-4">
+<img  src="images/icons8-visa-50 (1).png" alt="">
+<img src="images/icons8-mastercard-50.png" alt="">
+<img src="images/icons8-stripe-50.png" alt="">
+<svg class="w-12 h-12"  xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0,0,256,256">
+<g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M5,7c-2.75,0 -5,2.25 -5,5v26c0,2.75 2.25,5 5,5h40c2.75,0 5,-2.25 5,-5v-26c0,-2.75 -2.25,-5 -5,-5zM5,9h40c1.66797,0 3,1.33203 3,3v26c0,1.66797 -1.33203,3 -3,3h-40c-1.66797,0 -3,-1.33203 -3,-3v-26c0,-1.66797 1.33203,-3 3,-3zM8.5625,19.90625l-3.71875,8.5h2.21875l0.8125,-1.90625h4.1875l0.8125,1.90625h4.21875v-6.3125l2.8125,6.3125h1.90625l2.84375,-6.21875v6.21875h2.09375v-8.5h-3.34375l-2.5625,5.71875l-2.5625,-5.71875h-3.28125v8.1875l-3.65625,-8.1875zM29.5,19.90625v8.53125h8l2.5,-2.84375l2.46875,2.84375h2.65625l-3.75,-4.375l3.75,-4.15625h-2.65625l-2.40625,2.65625l-2.3125,-2.65625zM9.90625,21.6875l1.3125,3h-2.5625zM31.5625,21.71875l5.09375,0.03125l2.03125,2.3125l-2.28125,2.5625h-4.84375v-1.6875h4.625v-1.625h-4.625z"></path></g></g>
+</svg>
 </div>
+
+<h6 class="font-extralight text-sm text-blue-300 pt-6 pb-10 ">&copy;Nike.com.All rights  Reserved.</h6>
+
+</div>
+</footer>
+</div>
+
 
 
 
 <script src="script.js"></script>
 </body>
 </html>
+
+
+
+
