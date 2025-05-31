@@ -88,46 +88,6 @@ footer{
     color: white;
     margin-top: 90px;
 }
-/* .scrollable{
-    max-width: 920px;
-    justify-self: center;
-    animation: scroll 10s linear infinite;
-} */
-
-/* @keyframes scroll {
- to{
-    transform: translateX(-100%);
-}    
-} */
-/* 
-
-.scrollable{
-display: flex;
-justify-self: center;
-max-width: 70%;
---gap:20px;
-gap:var(--gap);
-}
-
-
-.scrolling-div{
-min-width: 50%;
-justify-self: center;
-animation: scroll 20s linear infinite;
-gap: var(--gap);
-}
-
-.scrolling-div:hover{
-    animation-play-state: paused;
-}
-
-
-@keyframes scroll{
-    to{
-        transform: translateX(calc(-100% - var(--gap)));
-    }
-    
-} */
 .carousel{
 margin: 0 auto;
 max-width: 980px;
@@ -191,7 +151,7 @@ font-family: 600;}
 <h2 class="main-heading text-6xl  font-bold  pb-6">Find your <br> dream sneakers</h2>
 <p class="text-[#47494d] text-lg">Find your shoes from our various collections. here shoes <br> are endless and profit is also endless.</p>
 <!-- <a> -->
-<button onclick="chngcontent('2ndcontainer')" id="updatebtn" class="w-fit text-center bg-[#252629] py-2 rounded text-white px-10  mt-6 hover:bg-[#515257]">Buy now</button>
+<button value="nine-waffle-one" onclick="chngcontent('2ndcontainer')" id="updatebtn" class="w-fit text-center bg-[#252629] py-2 rounded text-white px-10 buy-now-btn buy-now-btn mt-6 hover:bg-[#515257]">Buy now</button>
 <!-- </a> -->
     </div>
     <div class="w-5/12">
@@ -218,8 +178,8 @@ font-family: 600;}
         Nike Revoultion 5
     </h5>
 
-    <h6 class="font-semibold text-xl">$28</h6>
-<button id="nike-revol-btn" onclick="chngcontent('3rdcontainer')" class="text-center w-full bg-[#252629] text-white rounded mt-8 mb-3 py-1 hover:bg-[#515257]" >Buy Now</button>
+    <h6  class="font-semibold text-xl">$28</h6>
+<button value="nike-revolution-5" id="nike-revol-btn" onclick="chngcontent('3rdcontainer')" class="text-center w-full bg-[#252629] text-white rounded buy-now-btn mt-8 mb-3 py-1 hover:bg-[#515257]" >Buy Now</button>
 </div>
 </div>
 <div class="w-[70%]">
@@ -238,7 +198,7 @@ font-family: 600;}
     </h5>
 
     <h6 class="font-semibold text-xl">$20</h6>
-<button id="second-urlbtn" onclick="chngcontent('4thcontainer')"  class="text-center w-full bg-[#252629] text-white rounded mt-8 mb-3 py-1 hover:bg-[#515257]" >Buy Now</button>
+<button value="nike-revolution" id="second-urlbtn" onclick="chngcontent('4thcontainer')"  class="text-center w-full bg-[#252629] text-white buy-now-btn rounded mt-8 mb-3 py-1 hover:bg-[#515257]" >Buy Now</button>
 </div>
 </div>
 <div class="border rounded w-full">
@@ -249,7 +209,7 @@ font-family: 600;}
     </h5>
 
     <h6 class="font-semibold text-xl">$35</h6>
-<button id="third-btn" onclick="chngcontent('5thcontainer')" class="text-center w-full bg-[#252629] text-white rounded mt-8 mb-3 py-1 hover:bg-[#515257]" >Buy Now</button>
+<button value="nike-revolution-3" id="third-btn" onclick="chngcontent('5thcontainer')" class="text-center w-full bg-[#252629] text-white rounded buy-now-btn mt-8 mb-3 py-1 hover:bg-[#515257]" >Buy Now</button>
 </div>
 </div>
 <div class="border rounded w-full">
@@ -260,7 +220,7 @@ font-family: 600;}
     </h5>
 
     <h6 class="font-semibold text-xl">$15</h6>
-<button id="airjrdn-btn" onclick="chngcontent('6thcontainer')" class="text-center w-full bg-[#252629] text-white rounded mt-8 mb-3 py-1 hover:bg-[#515257]" >Buy Now</button>
+<button value="air-jordan" id="airjrdn-btn" onclick="chngcontent('6thcontainer')" class="text-center w-full bg-[#252629] text-white rounded buy-now-btn mt-8 mb-3 py-1 hover:bg-[#515257]" >Buy Now</button>
 </div>
 </div>
 <div class="border rounded w-full">
@@ -271,7 +231,7 @@ font-family: 600;}
     </h5>
 
     <h6 class="font-semibold text-xl">$22</h6>
-<button id="sports-btn" onclick="chngcontent('7thcontainer')" class="text-center w-full bg-[#252629] text-white rounded mt-8 mb-3 py-1 hover:bg-[#515257]" >Buy Now</button>
+<button value="nike-sports" id="sports-btn" onclick="chngcontent('7thcontainer')" class="text-center w-full bg-[#252629] text-white rounded buy-now-btn mt-8 mb-3 py-1 hover:bg-[#515257]" >Buy Now</button>
 </div>
 </div>
 </div>
@@ -284,7 +244,7 @@ font-family: 600;}
     </h5>
 
     <h6 class="font-semibold text-xl">$20</h6>
-<button id="second-urlbtn" onclick="chngcontent('4thcontainer')"  class="text-center w-full bg-[#252629] text-white rounded mt-8 mb-3 py-1 hover:bg-[#515257]" >Buy Now</button>
+<button id="second-urlbtn" onclick="chngcontent('4thcontainer')"  class="text-center w-full bg-[#252629] text-white rounded buy-now-btn mt-8 mb-3 py-1 hover:bg-[#515257]" >Buy Now</button>
 </div>
 </div>
 <div class="border rounded w-full">
@@ -295,7 +255,7 @@ font-family: 600;}
     </h5>
 
     <h6 class="font-semibold text-xl">$35</h6>
-<button id="third-btn" onclick="chngcontent('5thcontainer')" class="text-center w-full bg-[#252629] text-white rounded mt-8 mb-3 py-1 hover:bg-[#515257]" >Buy Now</button>
+<button id="third-btn" onclick="chngcontent('5thcontainer')" class="text-center w-full bg-[#252629] text-white buy-now-btn rounded mt-8 mb-3 py-1 hover:bg-[#515257]" >Buy Now</button>
 </div>
 </div>
 <div class="border rounded w-full">
@@ -306,7 +266,7 @@ font-family: 600;}
     </h5>
 
     <h6 class="font-semibold text-xl">$15</h6>
-<button id="airjrdn-btn" onclick="chngcontent('6thcontainer')" class="text-center w-full bg-[#252629] text-white rounded mt-8 mb-3 py-1 hover:bg-[#515257]" >Buy Now</button>
+<button id="airjrdn-btn" onclick="chngcontent('6thcontainer')" class="text-center w-full bg-[#252629] text-white buy-now-btn rounded mt-8 mb-3 py-1 hover:bg-[#515257]" >Buy Now</button>
 </div>
 </div>
 <div class="border rounded w-full">
@@ -317,7 +277,7 @@ font-family: 600;}
     </h5>
 
     <h6 class="font-semibold text-xl">$22</h6>
-<button id="sports-btn" onclick="chngcontent('7thcontainer')" class="text-center w-full bg-[#252629] text-white rounded mt-8 mb-3 py-1 hover:bg-[#515257]" >Buy Now</button>
+<button id="sports-btn" onclick="chngcontent('7thcontainer')" class="text-center w-full bg-[#252629] text-white buy-now-btn rounded mt-8 mb-3 py-1 hover:bg-[#515257]" >Buy Now</button>
 </div>
 </div>
 </div>
@@ -382,7 +342,7 @@ font-family: 600;}
 <div id="2ndcontainer" class="container2"> 
 
     <header class="bg-[#001f38] pt-4 pb-4">
-<div class="flex justify-between">
+<div class="flex justify-end">
 <div class="flex justify-end pr-8 gap-4"> 
 
     <select class="font-bold bg-[#001f38] cursor-pointer text-white" name="" id="">
@@ -429,8 +389,10 @@ font-family: 600;}
 <div class="flex gap-4 ">
 <img class="imgs" src="images/icons8-contacts-32.png">
 <img class="imgs" src="images/icons8-heart-50.png"> 
-<div>  
+<div> 
+    <a href="index2.html" target="_blank"> 
 <img class="imgs" src="images/icons8-shopping-bag-32.png">
+</a>
 <p class="addtocart" id="addtocart2"></p>
 </div>
 </div>
@@ -494,11 +456,11 @@ font-family: 600;}
         <pc class="font-bold text-lg">USD 250 x 1</pc>
        </div>
 </div>
-<!-- <p>Bringing a new look to the Waffle sneaker family, the Nike Waffle One <br> balances everything you love about heritage Nike runnign with fresh <br> innovations.Its TPU heel clip adds energy while a mixture of transp<br>arent mesh (let that sock game shine) and retro suedes give texture <br> and depth. The updated Waffle outsole provides a level of support <br> and traction you have to feel to believe </p> -->
 
 <p class="pt-4 pb-3 text-sm font-bold flex gap-2 items-center">Delivery <span class="text-[#8c8d91]">(5/7 days)</span></p>
 <div  class="pt-4">
-<button  id="main-img-button" onclick="addtocart('addtocart2')" class="bg-[#323336] text-white w-full py-2 rounded-md add-to-cart-btn hover:bg-[#4c4d52]">Add to cart</button>
+<button value="nine-waffle-one" id="main-img-button" onclick="addtocart('addtocart2')" class="bg-[#323336] px-40 text-white w-full py-2 rounded-md add-to-cart-btn hover:bg-[#4c4d52]">Add to Cart</button>
+
 </div>
 
     </div>
